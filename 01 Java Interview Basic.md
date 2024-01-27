@@ -212,3 +212,168 @@
 ### 50. **Explain the `try-with-resources` statement introduced in Java 7.**
    - **Answer:** The `try-with-resources` statement is used for automatic resource management. It ensures that each resource declared within the parentheses is closed automatically at the end of the statement, whether an exception occurs or not. Resources must implement the `AutoCloseable` or `Closeable` interface.
 
+
+### 51. **What is the difference between `Error` and `Exception` in Java?**
+   - **Answer:**
+     - `Error` is a serious issue that typically indicates a problem outside the control of the program (e.g., OutOfMemoryError). It's not meant to be caught or handled by normal application code.
+     - `Exception` is a more general issue that can be anticipated and handled by the program. Checked exceptions must be declared in the method signature or caught in a try-catch block.
+
+### 52. **Explain the `static` initialization block in Java.**
+   - **Answer:** A `static` initialization block is a block of code within a class that is executed only once when the class is loaded into memory. It is used for static initialization tasks, and it runs before the execution of the `main()` method or the creation of any object of the class.
+
+### 53. **What is the purpose of the `break` statement in a `switch` statement?**
+   - **Answer:** The `break` statement in a `switch` statement is used to exit the switch block once a matching case is found. Without the `break`, the execution would "fall through" to subsequent cases.
+
+### 54. **Explain the concept of the `Enum` in Java.**
+   - **Answer:** An `Enum` in Java is a special data type that represents a fixed set of constants. Enumerations are often used to create collections of related constants, providing type-safety and clarity to the code.
+
+### 55. **What is the purpose of the `volatile` modifier in Java?**
+   - **Answer:** The `volatile` modifier in Java is used to indicate that a variable's value may be changed by multiple threads simultaneously. It ensures that reads and writes to the variable are atomic and prevents certain types of thread interference.
+
+### 56. **Explain the concept of the `finalize()` method in the context of garbage collection.**
+   - **Answer:** The `finalize()` method is a method in the `Object` class that can be overridden by a class to provide specific actions when an object is about to be garbage collected. It allows for cleanup tasks before the object is reclaimed.
+
+### 57. **How does Java support the implementation of multithreading?**
+   - **Answer:** Java supports multithreading through the `Thread` class and the `Runnable` interface. Threads can be created by extending the `Thread` class or implementing the `Runnable` interface, and synchronization mechanisms like `synchronized` blocks and methods help manage concurrent access to shared resources.
+
+### 58. **Explain the concept of the `assert` keyword in Java.**
+   - **Answer:** The `assert` keyword is used for debugging purposes. It checks a boolean expression and throws an `AssertionError` if the expression is false. Assertions can be enabled or disabled at runtime using the `-ea` or `-da` JVM flags.
+
+### 59. **What is the purpose of the `System` class in Java?**
+   - **Answer:** The `System` class in Java provides access to system resources and allows interaction with the system environment. It contains methods for input/output, system properties, garbage collection, and more.
+
+### 60. **Explain the concept of the `java.util.concurrent` package in Java.**
+   - **Answer:** The `java.util.concurrent` package provides a framework for concurrent programming in Java. It includes classes for thread pooling, synchronization, locks, concurrent collections, and other utilities to simplify the development of multithreaded applications.
+
+### 61. **What is the purpose of the `Math` class in Java?**
+   - **Answer:** The `Math` class in Java provides a set of methods for performing mathematical operations. It includes methods for basic arithmetic, trigonometry, exponentiation, logarithms, and more.
+
+### 62. **Explain the concept of method references in Java 8.**
+   - **Answer:** Method references provide a shorthand syntax for lambda expressions when calling a method. There are four types of method references: 
+      - Static method reference: `ClassName::staticMethodName`
+      - Instance method reference of a particular object: `object::instanceMethodName`
+      - Instance method reference of an arbitrary object of a particular type: `ClassName::instanceMethodName`
+      - Constructor reference: `ClassName::new`
+
+### 63. **What is the `try`-with-resources statement, and how does it simplify resource management?**
+   - **Answer:** The `try`-with-resources statement is used for automatic resource management. It simplifies resource cleanup by automatically closing resources (like streams or sockets) declared in the try statement's parentheses. Resources must implement the `AutoCloseable` interface.
+
+### 64. **Explain the `java.nio` package and its significance.**
+   - **Answer:** The `java.nio` package provides support for non-blocking I/O and buffer management. It includes features like channels, selectors, and buffers, which are used for efficient, scalable I/O operations.
+
+### 65. **What is the purpose of the `Comparator` and `Comparable` interfaces in Java?**
+   - **Answer:**
+      - `Comparator`: It is used for custom sorting of objects. You can create a separate class that implements the `Comparator` interface or use lambda expressions to define custom sorting rules.
+      - `Comparable`: It is an interface that allows a class to implement natural ordering for its instances. Objects of a class that implements `Comparable` can be compared using the `compareTo()` method.
+
+### 66. **Explain the difference between a `HashSet` and a `TreeSet` in Java.**
+   - **Answer:**
+      - `HashSet`: It is an unordered collection that does not allow duplicate elements. It uses the hash code of the objects to store and retrieve elements quickly.
+      - `TreeSet`: It is a sorted set implemented as a red-black tree. Elements are stored in ascending order, and it does not allow duplicates.
+
+### 67. **How does Java handle memory management, and what is garbage collection?**
+   - **Answer:** Java uses automatic memory management through garbage collection. The garbage collector identifies and reclaims memory occupied by objects that are no longer reachable, freeing up resources and preventing memory leaks.
+
+### 68. **What are the differences between the `String`, `StringBuffer`, and `StringBuilder` classes?**
+   - **Answer:**
+      - `String`: Immutable, meaning its value cannot be changed after creation.
+      - `StringBuffer`: Mutable, thread-safe, and slower than `StringBuilder`.
+      - `StringBuilder`: Mutable, not thread-safe, and generally faster than `StringBuffer`.
+
+### 69. **Explain the concept of annotations in Java.**
+   - **Answer:** Annotations are a form of metadata that can be added to Java code. They provide information to the compiler, tools, or runtime environment. Annotations start with the `@` symbol and are used for various purposes, such as code generation, documentation, and runtime behavior specification.
+
+### 70. **What is the purpose of the `java.util.stream` package in Java 8?**
+   - **Answer:** The `java.util.stream` package provides a streamlined approach to processing sequences of elements, allowing for functional-style operations on data. It introduces the concept of streams, which support operations like filtering, mapping, and reducing.
+
+
+### 71. **Explain the concept of the Observer design pattern in Java.**
+   - **Answer:** The Observer pattern is a behavioral design pattern where an object, known as the subject, maintains a list of its dependents, called observers, that are notified of any changes in the subject's state. It is often used to implement distributed event handling systems.
+
+### 72. **What is the `super` keyword used for in constructors, and when is it required?**
+   - **Answer:** In a constructor, the `super` keyword is used to call the constructor of the superclass. It is required when the subclass constructor needs to explicitly invoke a constructor from the superclass. If not explicitly called, the compiler inserts a default `super()` call.
+
+### 73. **Explain the concept of inner static classes in Java.**
+   - **Answer:** Inner static classes are static nested classes that do not require an instance of the outer class for instantiation. They are associated with the class itself rather than an instance of the class. Inner static classes can access static members of the outer class.
+
+### 74. **What is the purpose of the `java.lang` package in Java?**
+   - **Answer:** The `java.lang` package is a fundamental package in Java and is automatically imported into every Java program. It includes classes that are essential to the Java programming language, such as `Object`, `String`, `Thread`, and basic data types like `int` and `boolean`.
+
+### 75. **Explain the `javac` compiler in Java and how it differs from the `java` command.**
+   - **Answer:** `javac` is the Java compiler that translates Java source code into bytecode. It is used during the compilation phase. The `java` command is used to execute the compiled bytecode. In summary, `javac` is for compilation, and `java` is for execution.
+
+### 76. **What is the purpose of the `java.lang.StringPool` in Java?**
+   - **Answer:** The `StringPool` in Java is a pool of `String` objects that are stored in the PermGen (or Metaspace in later versions) memory. It allows for efficient reuse of common strings, saving memory by ensuring that identical string literals share the same memory location.
+
+### 77. **Explain the concept of serialization and deserialization in Java.**
+   - **Answer:** Serialization is the process of converting an object into a byte stream, allowing it to be easily saved to a file, sent over a network, or stored in a database. Deserialization is the reverse process, where the byte stream is converted back into an object.
+
+### 78. **What is the purpose of the `this` reference in Java constructors?**
+   - **Answer:** The `this` reference in Java constructors is used to refer to the current instance of the class. It is often used to differentiate instance variables from parameters with the same name, and to invoke other constructors in the same class.
+
+### 79. **Explain the concept of the `java.lang.Class` class in Java.**
+   - **Answer:** The `Class` class in Java is a class that represents a class in the Java language. It provides methods to examine the runtime properties of a class, such as its fields, methods, and annotations. It is used for reflection.
+
+### 80. **What are lambda expressions, and how are they used in Java 8?**
+   - **Answer:** Lambda expressions in Java 8 provide a concise way to express instances of single-method interfaces (functional interfaces). They facilitate the use of functional programming features and make the code more readable. Lambda expressions are defined using the `->` syntax.
+
+
+### 81. **What is the purpose of the `java.util.Collections` class in Java?**
+   - **Answer:** The `Collections` class in Java provides utility methods for working with collections (e.g., lists, sets, maps). It includes methods for sorting, shuffling, searching, and other common operations on collections.
+
+### 82. **Explain the concept of the `Object` class in Java.**
+   - **Answer:** The `Object` class is the root class in the Java class hierarchy. Every class in Java is a direct or indirect subclass of `Object`. It provides basic methods like `toString()`, `equals()`, and `hashCode()`. All objects in Java inherit these methods.
+
+### 83. **What is the purpose of the `java.lang.Runtime` class in Java?**
+   - **Answer:** The `Runtime` class in Java provides a gateway to the runtime system. It allows the application to interface with the runtime environment, such as executing external processes, retrieving memory information, and interacting with the garbage collector.
+
+### 84. **Explain the concept of the `java.lang.ThreadLocal` class.**
+   - **Answer:** The `ThreadLocal` class in Java allows the creation of variables that are local to a thread. Each thread that accesses a `ThreadLocal` variable has its own, independently initialized copy of the variable. It is often used to store per-thread state or resources.
+
+### 85. **What is the purpose of the `java.util.Arrays` class in Java?**
+   - **Answer:** The `Arrays` class in Java provides utility methods for working with arrays. It includes methods for sorting, searching, and performing various operations on arrays.
+
+### 86. **Explain the concept of the `java.lang.Exception` class hierarchy in Java.**
+   - **Answer:** The `Exception` class is the root class for all exception classes in Java. It is part of the broader exception hierarchy, which includes checked exceptions (subclass of `Exception` excluding `RuntimeException`) and unchecked exceptions (`RuntimeException` and its subclasses).
+
+### 87. **What is the `java.time` package, and how does it improve date and time handling in Java?**
+   - **Answer:** The `java.time` package introduced in Java 8 provides a comprehensive API for handling dates, times, and durations. It addresses the shortcomings of the earlier `Date` and `Calendar` classes, offering better immutability, readability, and functionality.
+
+### 88. **Explain the concept of the `java.lang.StrictMath` class.**
+   - **Answer:** The `StrictMath` class in Java provides implementations of the Java Virtual Machine (JVM)-independent parts of the `Math` class. It ensures consistent mathematical operations across different JVM implementations.
+
+### 89. **What is the purpose of the `java.lang.Enum` class in Java?**
+   - **Answer:** The `Enum` class in Java is the common base class of all Java language enumeration types. It provides methods for working with enums, such as `values()`, `valueOf()`, and `ordinal()`.
+
+### 90. **Explain the concept of the `java.lang.ref` package in Java.**
+   - **Answer:** The `java.lang.ref` package provides classes for weak references, soft references, and phantom references. These reference types allow more flexible memory management, especially when dealing with objects that can be reclaimed by the garbage collector under certain conditions.
+
+### 91. **Explain the concept of the `java.util.Locale` class.**
+   - **Answer:** The `Locale` class in Java represents a specific geographical, political, or cultural region. It is used for internationalization and localization to adapt applications to different languages and regions.
+
+### 92. **What is the `java.util.Optional` class, and how is it used in Java?**
+   - **Answer:** The `Optional` class in Java is used to represent an optional value or the absence of a value. It helps avoid null references and provides methods for dealing with potentially missing values more safely.
+
+### 93. **Explain the concept of the `java.util.concurrent.atomic` package in Java.**
+   - **Answer:** The `java.util.concurrent.atomic` package provides classes that support atomic operations on single variables. These classes ensure that operations are performed atomically without the need for explicit synchronization.
+
+### 94. **What is the purpose of the `java.util.Scanner` class in Java?**
+   - **Answer:** The `Scanner` class in Java is used for parsing primitive data types and strings from input streams. It provides convenient methods for reading input from various sources, such as the keyboard or files.
+
+### 95. **Explain the concept of the `java.nio.file` package in Java.**
+   - **Answer:** The `java.nio.file` package provides a comprehensive and platform-independent API for file I/O and file system operations. It includes classes like `Path`, `Files`, and `FileSystem` for working with files and directories.
+
+### 96. **What is the `java.util.Properties` class, and how is it used for configuration in Java?**
+   - **Answer:** The `Properties` class in Java is a subclass of `Hashtable` and represents a persistent set of properties. It is often used for configuration purposes, such as storing key-value pairs in a properties file.
+
+### 97. **Explain the concept of the `java.lang.instrument` package in Java.**
+   - **Answer:** The `java.lang.instrument` package provides services that allow Java programming agents to instrument programs running on the Java Virtual Machine (JVM). It is used for bytecode instrumentation for profiling, monitoring, and code manipulation.
+
+### 98. **What is the purpose of the `java.util.function` package introduced in Java 8?**
+   - **Answer:** The `java.util.function` package provides functional interfaces that represent various types of functions, predicates, and consumers. It is a key part of the functional programming enhancements introduced in Java 8, facilitating the use of lambda expressions and method references.
+
+### 99. **Explain the concept of the `java.security` package in Java.**
+   - **Answer:** The `java.security` package provides the infrastructure for secure computing in Java. It includes classes for cryptographic operations, secure random number generation, and managing security policies.
+
+### 100. **What are the benefits of using the `java.util.concurrent` package in Java for concurrent programming?**
+   - **Answer:** The `java.util.concurrent` package provides high-level concurrency utilities that make it easier to develop concurrent and parallel programs. It offers thread pools, executor frameworks, concurrent collections, and synchronization utilities, simplifying the development of scalable and efficient concurrent applications.
