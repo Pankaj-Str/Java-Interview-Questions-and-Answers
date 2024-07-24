@@ -1,4 +1,4 @@
-## Top 100 Java Interview Questions & Answers: A Comprehensive Guide
+## Top 100 Java Interview Questions & Answers
 
 
 
